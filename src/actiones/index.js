@@ -1,12 +1,25 @@
-import { CHECK_SQUARE } from './types';
+import { CHECK_BOX } from './types';
+import { PLAY_BOX } from './types';
+import { PLAY_DRUM } from './types';
 
-export const checkSquare = (rowIndex, squareIndex) => {
+export const checkBox = (rowIndex, boxIndex) => {
+    let box = [{row: rowIndex}, {box: boxIndex}];
     return {
-        type: CHECK_SQUARE,
-        payload: {
-            row: rowIndex,
-            square: squareIndex,
-        }
+        type: CHECK_BOX,
+        payload: box
+    }
+}
 
+export const playBox = (boxIndex) => {
+    return {
+        type: PLAY_BOX,
+        payload: boxIndex
+    }
+}
+
+export const playDrum = () => {
+    return {
+        type: PLAY_DRUM,
+        //payload: boxIndex
     }
 }

@@ -1,6 +1,10 @@
 import { combineReducers} from 'redux';
-import boardSquares from './boardSquares';
+import boxContainer from './boxContainer';
+import topBoxes from './topBoxes';
+//import playDrum from './playDrum';
 
 export default combineReducers({
-    board: boardSquares
+    boxes: boxContainer,
+    topBoxes: topBoxes,
+    //play: playDrum
 });

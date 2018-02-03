@@ -17,7 +17,7 @@ class Board extends Component {
 }
 
 function mapStateToProps(state) {
-        return { rows: state.board.rows };
+        return { rows: state.boxes.rows };
 }
 
 export default connect(mapStateToProps)(Board);

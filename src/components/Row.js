@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Square from './Square';
+import Box from './Box';
 
 class Row extends Component {
       constructor(props) {
@@ -11,7 +11,7 @@ class Row extends Component {
       return (
         <div>
           <div className="board-row">
-            {this.props.squares.map(function (square, i) { return <Square rowNumber={rowNumber} squareNumber={i} key={i} {...square} />} )}
+            {this.props.row.map(function (box, i) { return <Box rowNumber={rowNumber} boxNumber={i} key={i} {...box} />} )}
           </div>
         </div>
       );  
