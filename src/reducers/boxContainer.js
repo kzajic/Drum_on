@@ -13,19 +13,26 @@ export default function(state = {rows}, action) {
             newState.rows[action.payload[0].row].row[action.payload[1].box].active = !newState.rows[action.payload[0].row].row[action.payload[1].box].active;
             return newState;
         case 'play_drum':
-        console.log(state.rows[0].row)
-            state.rows[0].row.map((box, index) => {
-                if (box.active){
-                    const audio = document.querySelector(`audio[data-key="${index}"]`);
-                    audio.play();
+            state.rows.map((row, index) => {
+                let play = function (row, time) {
+                    setTimeout( () => {
+                        row.map((box, index) => {
+                            if(box.active) {
+                                const audio = document.querySelector(`audio[data-key="${index}"]`);
+                                console.log(audio);
+                                audio.currentTime=0;
+                                audio.play();
+                            }
+                            
+                        })
+                    }, time);
+
                 }
-            });
-            state.rows[1].row.map((box, index) => { 
-                if (box.active){
-                    const audio = document.querySelector(`audio[data-key="${index}"]`);
-                    audio.play();
-                }
-            });
+                
+                let time = 1000 * index;
+                play(row.row, time);
+            })
+
             return state;
         default:
             return state;
