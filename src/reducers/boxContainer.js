@@ -19,11 +19,9 @@ export default function(state = {rows}, action) {
                         row.map((box, index) => {
                             if(box.active) {
                                 const audio = document.querySelector(`audio[data-key="${index}"]`);
-                                console.log(audio);
                                 audio.currentTime=0;
                                 audio.play();
                             }
-                            
                         })
                     }, time);
 

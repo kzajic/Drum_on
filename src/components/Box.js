@@ -6,19 +6,17 @@ class Box extends Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.active = false
   }
 
   handleClick() {
     let rowIndex = this.props.rowNumber;
     let boxIndex = this.props.boxNumber;
-    this.active = !this.active;
     this.props.checkBox(rowIndex, boxIndex);
   }
   
   render() {
-  return (
-    <div className={`box ${this.active ? 'box-active' : 'box-inactive'}`} onClick = {this.handleClick}>
+  return ( 
+    <div className={`box ${this.props.boxes.rows[this.props.rowNumber].row[this.props.boxNumber].active ? 'box-active' : 'box-inactive'}`} onClick = {this.handleClick}>
     </div>
   );
   }
