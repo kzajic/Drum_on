@@ -20,6 +20,5 @@ export const playBox = (boxIndex) => {
 export const playDrum = () => {
     return {
         type: PLAY_DRUM,
-        //payload: boxIndex
     }
 }

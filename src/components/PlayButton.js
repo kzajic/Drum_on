@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {playDrum} from '../actiones/index';
 
 class PlayButton extends Component {
-  constructor(props) {
+ constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
@@ -19,13 +19,14 @@ class PlayButton extends Component {
   }
 }
 
+
 const mapStateToProps = (state) => {
   return { ...state };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    playDrum: () => dispatch(playDrum())
+    playDrum: (row) => dispatch(playDrum(row))
   };
 };
 

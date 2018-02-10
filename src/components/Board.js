@@ -7,7 +7,7 @@ class Board extends Component {
     return (
       <div className="game">
         <div className="game-board">
-           <div className="board-row">
+           <div>
              {this.props.rows.map(function( row, i ) { return <Row id={i} key={i} {...row} />} )}
         </div>
         </div>

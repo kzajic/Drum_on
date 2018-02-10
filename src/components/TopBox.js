@@ -16,9 +16,9 @@ class TopBox extends Component {
   }
   
   render() {
-  return (
-    <div className="box top-box" onClick = {this.handleClick}></div>
-  );
+    return (
+      <div className="box top-box" onClick = {this.handleClick}></div>
+    );
   }
 }
 

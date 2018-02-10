@@ -36,6 +36,10 @@ body {
   background-color: white;
 }
 
+.row-play .box-active {
+    background-color: lightblue;
+}
+
 .main-box {
   margin: 5px;
   background: red;
