@@ -2,14 +2,30 @@ body {
   margin: 20px;
 }
 
+.game-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .board-row:after {
   clear: both;
   content: "";
   display: table;
 }
+.button-play {
+      padding: 20px;
+    font-size: 34px;
+}
 
-.top-box {
-  background-color: yellow;
+.game-navigation {
+  background-color: #34495e;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+        height: 70px;
+    display: flex;
 }
 
 .box {
@@ -17,28 +33,25 @@ body {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
+  height: 50px;
+  /*margin-right: -1px;
+  margin-top: -1px;*/
+  width: 50px;
+   border-width: 5px;
+   transition: all .2s ease-in-out; 
 }
 
-.box-active {
-  background-color: blue;
+.top-box {
+  background-color: yellow;
 }
+
 
 .box-inactive {
   background-color: white;
 }
 
-.row-play .box-active {
-    background-color: lightblue;
-}
+
+
 
 .main-box {
   margin: 5px;
@@ -57,3 +70,90 @@ body {
 }
 
 
+.box-color_0 {
+  border-color: #16a085;
+ 
+}
+
+.box-color_1 {
+  border-color: #f39c12;
+}
+
+.box-color_2 {
+  border-color:#27ae60;
+}
+
+.box-color_3 {
+  border-color: #8e44ad;
+}
+
+.box-color_4 {
+  border-color:#2980b9;
+}
+
+.box-color_5 {
+  border-color: #c0392b;
+}
+
+.top-box-color_0 {
+  background-color: #16a085;
+  border-color: #16a085
+ 
+}
+
+.top-box-color_1 {
+  background-color: #f39c12;
+  border-color: #f39c12;
+}
+
+.top-box-color_2 {
+  background-color:#27ae60;
+  border-color:#27ae60;
+}
+
+.top-box-color_3 {
+  background-color: #8e44ad;
+  border-color: #8e44ad;
+}
+
+.top-box-color_4 {
+  background-color:#2980b9;
+  border-color:#2980b9;
+}
+
+.top-box-color_5 {
+  background-color: #c0392b;
+  border-color: #c0392b;
+}
+
+.box-active.box-color_0{
+  background-color: #1abc9c;
+}
+
+.box-active.box-color_1{
+  background-color: #f1c40f;
+}
+
+.box-active.box-color_2 {
+  background-color: #2ecc71;
+}
+
+.box-active.box-color_3{
+  background-color: #9b59b6;
+}
+
+.box-active.box-color_4{
+  background-color: #3498db;
+}
+
+.box-active.box-color_5 {
+  background-color: #e74c3c;
+}
+
+.row-play .box-active {
+    opacity: 0.5;
+}
+
+.box-play {
+  transform: scale(1.1);
+}

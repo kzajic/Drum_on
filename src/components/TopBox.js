@@ -17,7 +17,7 @@ class TopBox extends Component {
   
   render() {
     return (
-      <div className="box top-box" onClick = {this.handleClick}></div>
+      <div className={`box top-box top-box-color_${this.props.boxNumber}`} onClick = {this.handleClick}></div>
     );
   }
 }

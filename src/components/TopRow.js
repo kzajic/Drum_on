@@ -10,7 +10,7 @@ class TopRow extends Component {
     render() {
       return (
         <div>
-          <div className="board-row">
+          <div className="board-row top-row">
             {this.props.topBoxes.topBoxes.map(function (box, i) { return <TopBox boxNumber={i} key={i} {...box} />} )}
           </div>
         </div>

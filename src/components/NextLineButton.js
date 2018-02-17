@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {playDrum} from '../actiones/index';
+import {NextLine} from '../actiones/index';
 
-class PlayButton extends Component {
+class NextLineButton extends Component {
  constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.props.playDrum();
+    this.props.NextLine();
   }
   
   render() {
   return (
-    <div className="button-play" onClick = {this.handleClick}><i class="fas fa-play"></i></div>
+    <div className="button-play" onClick = {this.handleClick}><i class="fas fa-angle-double-down"></i></div>
   );
   }
 }
@@ -26,8 +26,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    playDrum: () => dispatch(playDrum())
+    NextLine: () => dispatch(NextLine())
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlayButton);
+export default connect(mapStateToProps, mapDispatchToProps)(NextLineButton);

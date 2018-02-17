@@ -15,10 +15,12 @@ import wav_tom from '../sounds/tom.wav';
 
 
 const App = () => (
-  <div>
+  <div className="game-view">
     <TopRow />
     <Board />
+      <div className="game-navigation">
     <PlayButton />
+    </div>
       <audio data-key="0" src={wav_boom}></audio>
       <audio data-key="1"src={wav_clap}></audio>
       <audio data-key="2" src={wav_hihat}></audio>

@@ -17,7 +17,8 @@ class Box extends Component {
   render() {
   return ( 
     <div className={`box 
-                    ${this.props.boxes.rows[this.props.rowNumber].row[this.props.boxNumber].active ? 'box-active' : 'box-inactive'}`} 
+                    box-color_${this.props.boxNumber}
+                    ${this.props.boxes.rows[this.props.rowNumber].row[this.props.boxNumber][0].active ? 'box-active' : 'box-inactive'}`} 
          onClick = {this.handleClick}>
     </div>
   );
