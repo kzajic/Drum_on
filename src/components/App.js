@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import style from '../style.css';
+import reset from '../reset.css';
 import TopRow from './TopRow';
 import Board from './Board';
+import NextLine from './NextLineButton';
 import PlayButton from './PlayButton';
 import wav_boom from '../sounds/boom.wav';
 import wav_clap from '../sounds/clap.wav';
@@ -15,11 +17,15 @@ import wav_tom from '../sounds/tom.wav';
 
 
 const App = () => (
-  <div className="game-view">
-    <TopRow />
-    <Board />
-      <div className="game-navigation">
-    <PlayButton />
+  <div>
+    <div className="game-topnav"></div>
+    <div className="game-view">
+      <TopRow />
+      <Board />
+      <NextLine />
+    </div>
+    <div className="game-navigation">
+      <PlayButton />
     </div>
       <audio data-key="0" src={wav_boom}></audio>
       <audio data-key="1"src={wav_clap}></audio>

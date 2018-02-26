@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Row from './Row';
-import NextLine from './NextLineButton';
+
 
 class Board extends Component {
    constructor(props) {
@@ -18,7 +18,6 @@ class Board extends Component {
              {this.props.rows.map(function( row, i ) { return <Row id={i} key={i} {...row} />} )}
           </div>
         </div>
-         <NextLine />
       </div>
 
     );

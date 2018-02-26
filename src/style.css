@@ -6,6 +6,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 80vh;
+    overflow-y: scroll;
+    margin-top: 10vh;
 }
 
 .board-row:after {
@@ -16,6 +19,24 @@ body {
 .button-play {
       padding: 20px;
     font-size: 34px;
+    cursor: pointer;
+}
+
+.button-row {
+      padding: 20px;
+    font-size: 34px;
+    margin-bottom: 80px;
+}
+
+.game-topnav {
+  background-color: #34495e;
+    color: white;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end
 }
 
 .game-navigation {
@@ -23,9 +44,10 @@ body {
     color: white;
     position: fixed;
     bottom: 0px;
-    width: 100vw;
-        height: 70px;
+    width: 100%;
+    height: 10vh;
     display: flex;
+    justify-content: flex-end
 }
 
 .box {
@@ -41,16 +63,22 @@ body {
    transition: all .2s ease-in-out; 
 }
 
-.top-box {
+.box:hover {
+  cursor: pointer;
+}
+
+/*.top-box {
   background-color: yellow;
 }
 
 
 .box-inactive {
   background-color: white;
+}*/
+
+.top-row {
+  padding: 15px;
 }
-
-
 
 
 .main-box {
