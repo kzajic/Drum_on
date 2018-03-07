@@ -13,9 +13,9 @@ class NextLineButton extends Component {
   }
   
   render() {
-  return (
-    <div className="button-play" onClick = {this.handleClick}><i class="fas fa-angle-double-down"></i></div>
-  );
+    return (
+      <div className="button-play" onClick = {this.handleClick}><i class="fas fa-angle-double-down"></i></div>
+      );
   }
 }
 

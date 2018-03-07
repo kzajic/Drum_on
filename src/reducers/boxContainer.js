@@ -64,6 +64,9 @@ export default function(state = {rows}, action) {
                     };
             let clone = JSON.parse(JSON.stringify(state));
             clone.rows.push(row);
+            console.log({...state});
+            console.log(state);
+            console.log({...state, ...state.rows, ...row});
             //return Object.assign(state.rows, ...row);
             return clone;
         case 'play_drum':
