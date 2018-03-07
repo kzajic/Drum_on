@@ -6,7 +6,7 @@ let rows = [
           [{'active': false}, {'play': false}], 
           [{'active': false}, {'play': false}], 
           [{'active': false}, {'play': false}], 
-        ]
+        ],
     },
       { 'row' : [
           [{'active': false}, {'play': false}], 
@@ -15,7 +15,7 @@ let rows = [
           [{'active': false}, {'play': false}], 
           [{'active': false}, {'play': false}], 
           [{'active': false}, {'play': false}], 
-        ]
+        ],
     },
       { 'row' : [
           [{'active': false}, {'play': false}], 
@@ -24,7 +24,7 @@ let rows = [
           [{'active': false}, {'play': false}], 
           [{'active': false}, {'play': false}], 
           [{'active': false}, {'play': false}], 
-        ]
+        ],
     },
       { 'row' : [
          [{'active': false}, {'play': false}], 
@@ -33,7 +33,7 @@ let rows = [
           [{'active': false}, {'play': false}], 
           [{'active': false}, {'play': false}], 
           [{'active': false}, {'play': false}], 
-          ]
+          ],
         }, 
       { 'row' : [
           [{'active': false}, {'play': false}], 
@@ -42,7 +42,7 @@ let rows = [
           [{'active': false}, {'play': false}], 
           [{'active': false}, {'play': false}], 
           [{'active': false}, {'play': false}], 
-          ]
+          ],
         },      
     ] 
 
@@ -64,6 +64,7 @@ export default function(state = {rows}, action) {
                     };
             let clone = JSON.parse(JSON.stringify(state));
             clone.rows.push(row);
+            //return Object.assign(state.rows, ...row);
             return clone;
         case 'play_drum':
             state.rows.map((row, index) => {

@@ -11,6 +11,7 @@ class Box extends Component {
   handleClick() {
     let rowIndex = this.props.rowNumber;
     let boxIndex = this.props.boxNumber;
+    console.log(rowIndex);
     this.props.checkBox(rowIndex, boxIndex);
   }
   

@@ -10,7 +10,7 @@ class Board extends Component {
   }
   
   render() {
-    console.log('klik');
+    console.log(this.props);
     return (
       <div className="game">
         <div className="game-board">
@@ -25,6 +25,7 @@ class Board extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state.boxes.rows);
         return { rows: state.boxes.rows };
 }
 
